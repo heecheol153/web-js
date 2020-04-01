@@ -1,20 +1,45 @@
 //canvas要素のid取得
 const canvas = document.getElementById("js-canvas-test");
 
+//canvas要素の幅を取得
+const canvasWidth = canvas.clientWidth;
+
+//canvas要素の高さを取得
+const canvasHeight = canvas.clientHeight;
+
 //コンテキストの取得
 const context = canvas.getContext("2d");
 
-//塗りの色
-context.fillStyle = "#2980b9";
+//色の定義
+context.fillStyle = '#27ae60';
 
-//線の幅
-context.lineWidth = 4;
+//四角の大きさ
+const rectSize = 100;
 
-//線の色
-context.strokeStyle = "#34495e";
+//アニメーションの実行回数のカウント用変数
+let count = 0;
 
-//塗りの描画
-context.fillRect(10, 10, 100, 100);
+//アニメーション
+const animation = () => {
 
-//線の描画
-context.strokeRect(8, 8, 102, 102)
+  //現在の描画を消去
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
+
+  //パスのリセット
+  context.beginPath();
+
+  //x軸方向に1ピクセル移動
+  context.translate(1, 0);
+
+  //描画
+  context.fillRect(0, 0, rectSize, rectSize);
+
+  //canvasの端まで到達するまでanimationを繰り返す
+  if (count <= canvasWidth - rectSize) {
+    count += 1;
+    requestAnimationFrame(animation);
+  }
+
+}
+
+requestAnimationFrame(animation);
