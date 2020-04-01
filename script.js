@@ -14,7 +14,7 @@ const context = canvas.getContext("2d");
 context.fillStyle = '#27ae60';
 
 //四角の大きさ
-const rectSize = 100;
+const rectSize = 10;
 
 //アニメーションの実行回数のカウント用変数
 let count = 0;
