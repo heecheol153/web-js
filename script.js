@@ -13,3 +13,11 @@ var context = paper.getContext('2d');
 // Canvasの幅と高さを指定
 paper.width = 400;
 paper.height = 200;
+
+// スタイルは描画前に指定
+// 塗りつぶしの色を指定
+context.fillStyle = '#429955';
+ 
+// 正方形を描く
+// fillRect(x, y, w, h) … xyが座標、whは幅と高さ
+context.fillRect(50, 50, 100, 100);
