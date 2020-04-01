@@ -29,7 +29,7 @@ const animation = () => {
   context.beginPath();
 
   //x軸方向に1ピクセル移動
-  context.translate(1, 0);
+  context.translate(1, 1);
 
   //描画
   context.fillRect(0, 0, rectSize, rectSize);
