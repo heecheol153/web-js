@@ -51,3 +51,7 @@ function a()
   alert("Great!");
 }
 
+function proc()
+{
+  alert("Oh!");
+}
