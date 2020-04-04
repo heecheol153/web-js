@@ -44,6 +44,6 @@ const animation = () => {
 
 requestAnimationFrame(animation);
 
-console.log(¥n);
+console.log(\n);
 
 for (i=0; i<10; i++) document.write(i);
